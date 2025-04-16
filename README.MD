@@ -63,123 +63,124 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
 
 ### Users API
 
-- **Create a New User**
+- **Creare un nuovo utente**
 
   - Endpoint: `/users/`
-  - Method: `POST`
-  - Description: Create a new user.
-    - Request Body:
-    - **Name**: User's name.
-    - **Surname**: User's surname.
-    - **Email**: User's email address.
+  - Metodo:: `POST`
+  - Descrizione: Crea un nuovo utente.
+    - Body della richiesta:
+    - **name**: Nome dell’utente
+    - **Surname**:  Cognome dell’utente
+    - **Email**: Indirizzo email dell’utente
 
-- **Get All Users**
+- **Recuperare tutti gli utenti**
 
   - Endpoint: `/users/`
-  - Method: `GET`
-  - Description: Retrieve a list of all registered users.
+  - Metodo:: `GET`
+  - Descrizione:  Recupera l’elenco di tutti gli utenti registrati.
 
-- **Get User by ID**
-
-  - Endpoint: `/users/:userID`
-  - Method: `GET`
-  - Description: Retrieve user information based on their ID.
-
-- **Update User by ID**
+- **Recuperare un utente per ID**
 
   - Endpoint: `/users/:userID`
-  - Method: `PUT`
-  - Description: Update user information based on their ID.
-    - Request Body:
-    - **Name**: User's name.
-    - **Surname**: User's surname.
-    - **Email**: User's email address.
+  - Metodo: `GET`
+  - Descrizione: Ottiene le informazioni di un utente tramite il suo ID.
 
-- **Delete User by ID**
+- **Aggiornare un utente per ID**
+
   - Endpoint: `/users/:userID`
-  - Method: `DELETE`
-  - Description: Delete a user based on their email.
+  - Metodo: `PUT`
+  - Descrizione: Aggiorna le informazioni di un utente in base al suo ID.
+    - Body della richiesta:
+    - **Name**: Nome
+    - **Surname**: Cognome
+    - **Email**: Email.
+
+- **Eliminare un utente per ID**
+  - Endpoint: `/users/:userID`
+  - Metodo: `DELETE`
+  - Descrizione: Elimina un utente tramite il suo ID.
 
 ### Products API
 
-- **Create a New Product**
+- **Creare un nuovo prodotto**
 
   - Endpoint: `/products/`
-  - Method: `POST`
-  - Description: Create a new product.
-    - Request Body:
-    - **Name**: Product's name.
+  - Metodo: `POST`
+  - Descrizione: Crea un nuovo prodotto.
+    - Body della richiesta:
+    - **Name**: Nome del prodotto.
 
-- **Get All Products**
+- **Recuperare tutti i prodotti**
 
   - Endpoint: `/products/`
-  - Method: `GET`
-  - Description: Retrieve a list of all products.
+  - Metodo: `GET`
+  - Descrizione: Recupera l’elenco di tutti i prodotti.
 
-- **Get Product by ID**
-
-  - Endpoint: `/products/:productId`
-  - Method: `GET`
-  - Description: Retrieve product information based on its ProductId.
-
-- **Update Product by ID**
+- **Recuperare un prodotto per ID**
 
   - Endpoint: `/products/:productId`
-  - Method: `PUT`
-  - Description: Update product information based on its ProductId.
-  - Request Body:
-    - **Name**: Product's name.
+  - Metodo: `GET`
+  - Descrizione: Recupera le informazioni di un prodotto tramite il suo ID.
 
-- **Delete Product by ID**
+- **Aggiornare un prodotto per ID**
+
   - Endpoint: `/products/:productId`
-  - Method: `DELETE`
-  - Description: Delete a product based on its ProductId.
+  - Metodo: `PUT`
+  - Descrizione: Aggiorna le informazioni di un prodotto tramite il suo ID.
+  - Body della richiesta:
+    - **Name**:  Nome del prodotto
+
+- **Eliminare un prodotto per ID**
+  - Endpoint: `/products/:productId`
+  - Metodo: `DELETE`
+  - Descrizione: Elimina un prodotto in base al suo ID.
 
 ### Orders API
 
-- **Create a New Order**
+- **Creare un nuovo ordine**
 
   - Endpoint: `/orders/`
-  - Method: `POST`
-  - Description: Create a new order.
-  - Request Body:
-    - **userID**: User's id.
-    - **productID**: product id.
+  - Metodo: `POST`
+  - Descrizione: Crea un nuovo ordine.
+  - Body della richiesta:
+    - **userID**: ID dell’utente
+    - **productID**:  ID del prodotto
 
-- **Get All Orders**
+
+- **Recuperare tutti gli ordini**
 
   - Endpoint: `/orders/`
-  - Method: `GET`
-  - Description: Retrieve a list of all orders.
+  - Metodo: `GET`
+  - Descrizione: Recupera l’elenco di tutti gli ordini.
 
-- **Get All Orders by Date**
+- **Recuperare tutti gli ordini per data**
 
   - Endpoint: `/orders/all/:date`
-  - Method: `GET`
-  - Description: Retrieve orders filtered by a specific date.
+  - Metodo: `GET`
+  - Descrizione: Recupera gli ordini filtrati per una data specifica.
 
-- **Get All Orders by Product**
+- **Recuperare tutti gli ordini per prodotto**
 
   - Endpoint: `/search/:productName`
-  - Method: `GET`
-  - Description: Retrieve orders filtered by a specific product.
+  - Metodo: `GET`
+  - Descrizione: Recupera gli ordini filtrati per un prodotto specifico.
 
-- **Get Orders by ID**
-
-  - Endpoint: `/orders/:orderId`
-  - Method: `GET`
-  - Description: Retrieve orders for a specific OrderId.
-
-- **Update Order by ID**
+- **Recuperare un ordine per ID**
 
   - Endpoint: `/orders/:orderId`
-  - Method: `PUT`
-  - Description: Update an order based on its ID.
-  - Request Body:
-    - **userID**: User's id.
-    - **productID**: product id.
+  - Metodo: `GET`
+  - Descrizione: Recupera un ordine tramite il suo ID.
 
-- **Elimina ordine per ID**
+- **Aggiornare un ordine per ID**
+
+  - Endpoint: `/orders/:orderId`
+  - Metodo: `PUT`
+  - Descrizione: Aggiorna un ordine in base al suo ID.
+  - Body della richiesta:
+    - **userID**:  ID dell’utente
+    - **productID**: ID del prodotto
+
+- **Eliminare un ordine per ID**
   - Endpoint: `/orders/:orderId`
   - Method: `DELETE`
   - Descrizione: Elimina un ordine in base al suo ID.
