@@ -1,6 +1,6 @@
 ## Orizon - RESTful API per Viaggi Responsabili
 
-Benvenuto! Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di ##utenti##, prodotti (viaggi) e ordini.
+Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di ##utenti##, prodotti (viaggi) e ordini.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
