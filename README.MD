@@ -1,6 +1,6 @@
 ## Orizon - RESTful API per Viaggi Responsabili
 
-Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di ##utenti##, prodotti (viaggi) e ordini.
+Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di utenti, prodotti (viaggi) e ordini.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -12,57 +12,54 @@ Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che prom
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# Getting Started with Travel Api
+#  Introduzione all'API Orizon
 
-This project uses Node.js and Express. Ensure you have them installed before proceeding.
+Questo progetto utilizza Node.js e Express.js. Assicurati di avere questi strumenti installati sul tuo computer prima di iniziare.
 
-## Prerequisites
+##  Prerequisiti
 
-- Node.js, MongoDB and npm installed on your machine.
+- Node.js, MongoDB e npm devono essere installati sulla tua macchina.
 
-## Installation
+##  Installazione
 
-1. Clone the repository
+1. Clona il repository
 
    ```sh
-   git clone https://github.com/DarioCepele/TravelAPI-S2i.git
+   git clone https://github.com/tuo-utente/orizon-api.git
 
    ```
 
-2. Install NPM packages
+2. Installa i pacchetti npm
 
    ```
    npm install
    ```
 
-3. Create .env file
+3. Crea il file .env 
 
    ```
-   DATABASE_URL=mongodb://0.0.0.0:27017/"Your DB Name"
+    DATABASE_URL=mongodb://localhost:27017/orizon-db
    ```
 
-4. Start application
+4. Avvia l'applicazione
    ```
    node server.js
    ```
       <p align="right">(<a href="#readme-top">back to top</a>)</p>
    <!-- USAGE -->
 
-## Usage
+## Utilizzo
 
-To use the "Travel Api," follow these simple steps:
+Per utilizzare "API Orizon", segui questi semplici passaggi:
 
-1.Make API requests to create, retrieve, update, or delete person and product.
-
-2.Make API requests to create, retrieve, update, or delete of sales order.
+1. Effettuare richieste API per creare, recuperare, aggiornare o eliminare persone e prodotti.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- API DOCUMENTATION -->
 
-## API Documentation
+## Documentazione API
 
-The "Travel Api" provides the following APIs:
+"Travel Api" fornisce le seguenti API:
 
 ### Users API
 
@@ -182,10 +179,10 @@ The "Travel Api" provides the following APIs:
     - **userID**: User's id.
     - **productID**: product id.
 
-- **Delete Order by ID**
+- **Elimina ordine per ID**
   - Endpoint: `/orders/:orderId`
   - Method: `DELETE`
-  - Description: Delete an order based on its ID.
+  - Descrizione: Elimina un ordine in base al suo ID.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
