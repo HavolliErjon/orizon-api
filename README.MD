@@ -1,6 +1,6 @@
-## Travel Api
+## Orizon - RESTful API per Viaggi Responsabili
 
-The "Travel Api" is a web application that provides the API for working with travels!
+Benvenuto! Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di ##utenti##, prodotti (viaggi) e ordini.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,18 +187,16 @@ The "Travel Api" provides the following APIs:
   - Method: `DELETE`
   - Description: Delete an order based on its ID.
 
-Please refer to the respective API endpoints for detailed information on how to use each of them.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CONTACT -->
+<!-- CONTATTI-->
 
-## Contact
+## Contatti
 
-- Instagram: [@dario.cepele](https://www.instagram.com/dario.cepele/)
-- LinkedIn: [Dario Cepele](https://www.linkedin.com/in/Dario-Cepele/)
-- GitHub: [Dario Cepele](https://github.com/DarioCepele)
+- LinkedIn: [Erjon Havolli](https://www.linkedin.com/in/erjon-havolli/)
+- GitHub: [Erjon Havolli](https://github.com/HavolliErjon)
+
 
 Project Link: [https://github.com/HavolliErjon/orizon-api](https://github.com/HavolliErjon/orizon-api)  
 
