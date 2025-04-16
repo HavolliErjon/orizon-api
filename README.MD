@@ -200,7 +200,7 @@ Please refer to the respective API endpoints for detailed information on how to 
 - LinkedIn: [Dario Cepele](https://www.linkedin.com/in/Dario-Cepele/)
 - GitHub: [Dario Cepele](https://github.com/DarioCepele)
 
-Project Link:
+Project Link: [https://github.com/HavolliErjon/orizon-api](https://github.com/HavolliErjon/orizon-api)  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
