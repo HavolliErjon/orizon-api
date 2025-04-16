@@ -65,38 +65,38 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
 
 - **Creare un nuovo utente**
 
-  - Endpoint: `/users/`
+  - Endpoint: `/api/users/`
   - Metodo:: `POST`
   - Descrizione: Crea un nuovo utente.
     - Body della richiesta:
     - **name**: Nome dell’utente
-    - **Surname**:  Cognome dell’utente
-    - **Email**: Indirizzo email dell’utente
+    - **surname**:  Cognome dell’utente
+    - **email**: Indirizzo email dell’utente
 
 - **Recuperare tutti gli utenti**
 
-  - Endpoint: `/users/`
+  - Endpoint: `/api/users/`
   - Metodo:: `GET`
   - Descrizione:  Recupera l’elenco di tutti gli utenti registrati.
 
 - **Recuperare un utente per ID**
 
-  - Endpoint: `/users/:userID`
+  - Endpoint: `/api/users/:userID`
   - Metodo: `GET`
   - Descrizione: Ottiene le informazioni di un utente tramite il suo ID.
 
 - **Aggiornare un utente per ID**
 
-  - Endpoint: `/users/:userID`
+  - Endpoint: `/api/users/:userID`
   - Metodo: `PUT`
   - Descrizione: Aggiorna le informazioni di un utente in base al suo ID.
     - Body della richiesta:
-    - **Name**: Nome
-    - **Surname**: Cognome
-    - **Email**: Email.
+    - **name**: Nome
+    - **surname**: Cognome
+    - **email**: Email.
 
 - **Eliminare un utente per ID**
-  - Endpoint: `/users/:userID`
+  - Endpoint: `/api/users/:userID`
   - Metodo: `DELETE`
   - Descrizione: Elimina un utente tramite il suo ID.
 
@@ -104,34 +104,34 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
 
 - **Creare un nuovo prodotto**
 
-  - Endpoint: `/products/`
+  - Endpoint: `/api/products/`
   - Metodo: `POST`
   - Descrizione: Crea un nuovo prodotto.
     - Body della richiesta:
-    - **Name**: Nome del prodotto.
+    - **name**: Nome del prodotto.
 
 - **Recuperare tutti i prodotti**
 
-  - Endpoint: `/products/`
+  - Endpoint: `/api/products/`
   - Metodo: `GET`
   - Descrizione: Recupera l’elenco di tutti i prodotti.
 
 - **Recuperare un prodotto per ID**
 
-  - Endpoint: `/products/:productId`
+  - Endpoint: `/api/products/:productId`
   - Metodo: `GET`
   - Descrizione: Recupera le informazioni di un prodotto tramite il suo ID.
 
 - **Aggiornare un prodotto per ID**
 
-  - Endpoint: `/products/:productId`
+  - Endpoint: `/api/products/:productId`
   - Metodo: `PUT`
   - Descrizione: Aggiorna le informazioni di un prodotto tramite il suo ID.
   - Body della richiesta:
-    - **Name**:  Nome del prodotto
+    - **name**:  Nome del prodotto
 
 - **Eliminare un prodotto per ID**
-  - Endpoint: `/products/:productId`
+  - Endpoint: `/api/products/:productId`
   - Metodo: `DELETE`
   - Descrizione: Elimina un prodotto in base al suo ID.
 
@@ -139,7 +139,7 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
 
 - **Creare un nuovo ordine**
 
-  - Endpoint: `/orders/`
+  - Endpoint: `/api/orders/`
   - Metodo: `POST`
   - Descrizione: Crea un nuovo ordine.
   - Body della richiesta:
@@ -149,31 +149,31 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
 
 - **Recuperare tutti gli ordini**
 
-  - Endpoint: `/orders/`
+  - Endpoint: `/api/orders/`
   - Metodo: `GET`
   - Descrizione: Recupera l’elenco di tutti gli ordini.
 
 - **Recuperare tutti gli ordini per data**
 
-  - Endpoint: `/orders/all/:date`
+  - Endpoint: `/api/orders/all/:date`
   - Metodo: `GET`
   - Descrizione: Recupera gli ordini filtrati per una data specifica.
 
 - **Recuperare tutti gli ordini per prodotto**
 
-  - Endpoint: `/search/:productName`
+  - Endpoint: `/api/search/:productName`
   - Metodo: `GET`
   - Descrizione: Recupera gli ordini filtrati per un prodotto specifico.
 
 - **Recuperare un ordine per ID**
 
-  - Endpoint: `/orders/:orderId`
+  - Endpoint: `/api/orders/:orderId`
   - Metodo: `GET`
   - Descrizione: Recupera un ordine tramite il suo ID.
 
 - **Aggiornare un ordine per ID**
 
-  - Endpoint: `/orders/:orderId`
+  - Endpoint: `/api/orders/:orderId`
   - Metodo: `PUT`
   - Descrizione: Aggiorna un ordine in base al suo ID.
   - Body della richiesta:
@@ -181,7 +181,7 @@ Per utilizzare "API Orizon", segui questi semplici passaggi:
     - **productID**: ID del prodotto
 
 - **Eliminare un ordine per ID**
-  - Endpoint: `/orders/:orderId`
+  - Endpoint: `/api/orders/:orderId`
   - Method: `DELETE`
   - Descrizione: Elimina un ordine in base al suo ID.
 
