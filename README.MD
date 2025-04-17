@@ -43,7 +43,7 @@ Questo progetto utilizza Node.js e Express.js. Assicurati di avere questi strume
 
 4. Avvia l'applicazione
    ```
-   node server.js
+   node src/index.js
    ```
       <p align="right">(<a href="#readme-top">back to top</a>)</p>
    <!-- USAGE -->
