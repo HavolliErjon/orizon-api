@@ -27,7 +27,6 @@ Questo progetto utilizza Node.js e Express.js. Assicurati di avere questi strume
    ```sh
    git clone https://github.com/HavolliErjon/orizon-api.git
 
-
    ```
 
 2. Installa i pacchetti npm
