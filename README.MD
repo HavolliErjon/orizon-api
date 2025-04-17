@@ -25,7 +25,8 @@ Questo progetto utilizza Node.js e Express.js. Assicurati di avere questi strume
 1. Clona il repository
 
    ```sh
-   git clone https://github.com/tuo-utente/orizon-api.git
+   git clone https://github.com/HavolliErjon/orizon-api.git
+
 
    ```
 
