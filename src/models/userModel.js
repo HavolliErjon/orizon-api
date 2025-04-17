@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true, // Garantiamo che l'email sia unica
+    unique: true, 
   },
 });
 

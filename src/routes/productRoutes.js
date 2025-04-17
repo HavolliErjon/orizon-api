@@ -1,12 +1,12 @@
 const express = require('express');
-const Product = require('../models/Product'); // Importiamo il modello Product
+const Product = require('../models/Product'); 
 const router = express.Router();
 
 // 1. Vedi tutti i prodotti
 router.get('/prodotti', async (req, res) => {
   try {
-    const prodotti = await Product.find(); // Prende tutti i prodotti dal database
-    res.status(200).json(prodotti); // Risponde con i prodotti in formato JSON
+    const prodotti = await Product.find(); 
+    res.status(200).json(prodotti); 
   } catch (error) {
     res.status(500).json({ message: 'Errore del server' });
   }
@@ -16,7 +16,7 @@ router.get('/prodotti', async (req, res) => {
 router.get('/prodotti/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const prodotto = await Product.findById(id); // Trova il prodotto con l'ID dato
+    const prodotto = await Product.findById(id); 
     if (!prodotto) {
       return res.status(404).json({ message: 'Prodotto non trovato' });
     }
@@ -31,14 +31,14 @@ router.post('/prodotti', async (req, res) => {
   const { nome, descrizione, prezzo, dataPartenza } = req.body;
   try {
     const nuovoProdotto = new Product({ nome, descrizione, prezzo, dataPartenza });
-    await nuovoProdotto.save(); // Salva il prodotto nel database
-    res.status(201).json(nuovoProdotto); // Risponde con il prodotto appena creato
+    await nuovoProdotto.save();
+    res.status(201).json(nuovoProdotto); 
   } catch (error) {
     res.status(400).json({ message: 'Dati non validi' });
   }
 });
 
-// ✅ Modifica prodotto
+//Modifica prodotto
 router.put('/prodotti/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -56,7 +56,7 @@ router.put('/prodotti/:id', async (req, res) => {
 
     res.json({ message: 'Prodotto aggiornato con successo', prodotto });
   } catch (err) {
-    console.error('Errore dettagliato:', err); // Mostra l'errore completo nel terminale
+    console.error('Errore dettagliato:', err); 
     res.status(500).json({ message: 'Errore nel modificare il prodotto', error: err.message });
   }
 });
@@ -67,7 +67,7 @@ router.put('/prodotti/:id', async (req, res) => {
 router.delete('/prodotti/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const prodotto = await Product.findByIdAndDelete(id); // Elimina il prodotto dal database
+    const prodotto = await Product.findByIdAndDelete(id); 
     if (!prodotto) {
       return res.status(404).json({ message: 'Prodotto non trovato' });
     }

@@ -1,13 +1,13 @@
 const express = require('express');
-const User = require('../models/userModel');  // Importa il modello User
+const User = require('../models/userModel');  
 const router = express.Router();
 
-// Aggiungi un nuovo utente
-router.post('/', async (req, res) => {  // Cambia il percorso in "/" anziché "/users"
+
+router.post('/', async (req, res) => {  
   try {
     const { nome, cognome, email } = req.body;
 
-    // Verifica che l'email sia unica
+    
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: 'Email già registrata' });
@@ -22,11 +22,11 @@ router.post('/', async (req, res) => {  // Cambia il percorso in "/" anziché "/
   }
 });
 
-// Vedi tutti gli utenti
+
 router.get('/', async (req, res) => {
   try {
-    const utenti = await User.find(); // Recupera tutti gli utenti
-    res.status(200).json(utenti); // Restituisci gli utenti in formato JSON
+    const utenti = await User.find(); 
+    res.status(200).json(utenti); 
   } catch (error) {
     res.status(500).json({ message: 'Errore nel recuperare gli utenti' });
   }

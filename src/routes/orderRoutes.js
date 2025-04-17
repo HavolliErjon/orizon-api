@@ -37,6 +37,5 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Altre route qui...
 
 module.exports = router;

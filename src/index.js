@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const productRoutes = require('./routes/productRoutes');  // Importa le rotte dei prodotti
-const userRoutes = require('./routes/userRoutes');  // Importa le rotte degli utenti
-const orderRoutes = require('./routes/orderRoutes');  // Importa le rotte degli ordini
+const productRoutes = require('./routes/productRoutes'); 
+const userRoutes = require('./routes/userRoutes');  
+const orderRoutes = require('./routes/orderRoutes');  
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Rotte
-app.use('/api', productRoutes);  // Le rotte dei prodotti iniziano con "/api/prodotti"
-app.use('/api/users', userRoutes);  // Le rotte degli utenti iniziano con "/api/users"
-app.use('/api/ordini', orderRoutes);  // Le rotte degli ordini iniziano con "/api/ordini"
+app.use('/api', productRoutes);  
+app.use('/api/users', userRoutes);  
+app.use('/api/ordini', orderRoutes);  
 
 // Connessione al database MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/orizon', {
@@ -21,11 +21,11 @@ mongoose.connect('mongodb://127.0.0.1:27017/orizon', {
   useUnifiedTopology: true,
 })
 .then(() => {
-  console.log('✅ Connessione a MongoDB riuscita');
+  console.log('Connessione a MongoDB riuscita');
   app.listen(PORT, () => {
-    console.log(`🚀 Server avviato su http://localhost:${PORT}`);
+    console.log(`Server avviato su http://localhost:${PORT}`);
   });
 })
 .catch((err) => {
-  console.error('❌ Errore di connessione a MongoDB:', err);
+  console.error('Errore di connessione a MongoDB:', err);
 });

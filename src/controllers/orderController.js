@@ -21,8 +21,8 @@ exports.createOrder = async (req, res) => {
 exports.getOrders = async (req, res) => {
   try {
     const orders = await Order.find()
-      .populate('prodotto', 'nome prezzo dataPartenza') // Popola i dati del prodotto
-      .populate('utente', 'nome cognome email');        // Popola i dati dell'utente
+      .populate('prodotto', 'nome prezzo dataPartenza') 
+      .populate('utente', 'nome cognome email');       
     res.json(orders);
   } catch (err) {
     res.status(500).json({ error: err.message });
