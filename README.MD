@@ -1,6 +1,6 @@
-## Orizon - RESTful API per Viaggi Responsabili
+## Orizon - RESTful API for Responsible Travel
 
-Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che promuove un turismo sostenibile e consapevole. L'applicazione fornisce un set di API RESTful per la gestione di utenti, prodotti (viaggi) e ordini.
+This project represents the backend for **Orizon**, a travel agency promoting sustainable and responsible tourism. The application provides a set of RESTful APIs for managing users, travel products, and orders.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -9,188 +9,185 @@ Questo progetto rappresenta il backend per Orizon, un'agenzia di viaggi che prom
 - Node.js
 - Express
 - MongoDB
+- Mongoose
+- Dotenv
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#  Introduzione all'API Orizon
+#  Getting Started
 
-Questo progetto utilizza Node.js e Express.js. Assicurati di avere questi strumenti installati sul tuo computer prima di iniziare.
+This project uses **Node.js** and **Express.js**. Make sure these tools are installed on your machine before starting.
 
-##  Prerequisiti
+##  Prerequisites
 
-- Node.js, MongoDB e npm devono essere installati sulla tua macchina.
+- Node.js, npm, and MongoDB installed on your local machine.
 
-##  Installazione
+##  Installation
 
-1. Clona il repository
+1. Clone the repository:
 
    ```sh
-   git clone https://github.com/HavolliErjon/orizon-api.git
+   git clone https://github.com/tuo-utente/orizon-api.git
 
    ```
 
-2. Installa i pacchetti npm
+2. Install dependencies:
 
    ```
    npm install
    ```
 
-3. Crea il file .env 
+3. Create a .env file in the root directory with the       following content:
 
    ```
-    DATABASE_URL=mongodb://localhost:27017/orizon-db
+   MONGO_URI=mongodb://127.0.0.1:27017/orizon
+   PORT=3000
    ```
 
-4. Avvia l'applicazione
+4. Start the application:
    ```
-   node src/index.js
+   node server.js
    ```
       <p align="right">(<a href="#readme-top">back to top</a>)</p>
-   <!-- USAGE -->
+   
 
-## Utilizzo
+## API Usage
 
-Per utilizzare "API Orizon", segui questi semplici passaggi:
-
-1. Effettuare richieste API per creare, recuperare, aggiornare o eliminare persone e prodotti.
+You can interact with the API by sending HTTP requests to the endpoints listed below.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Documentazione API
+## API Documentation
 
-"Travel Api" fornisce le seguenti API:
+Users API
 
-### Users API
-
-- **Creare un nuovo utente**
+- **Create a new user**
 
   - Endpoint: `/api/users/`
-  - Metodo:: `POST`
-  - Descrizione: Crea un nuovo utente.
-    - Body della richiesta:
-    - **name**: Nome dell’utente
-    - **surname**:  Cognome dell’utente
-    - **email**: Indirizzo email dell’utente
+  - Method: `POST`
+  - Description: Creates a new user.
+    - Request body:
+    - **name**: User's first name
+    - **surname**:  User's last name
+    - **email**: User's email address
 
-- **Recuperare tutti gli utenti**
+- **Retrieve all users**
 
   - Endpoint: `/api/users/`
-  - Metodo:: `GET`
-  - Descrizione:  Recupera l’elenco di tutti gli utenti registrati.
+  - Method: `GET`
+  - Description: Retrieves a list of all registered users.
 
-- **Recuperare un utente per ID**
-
-  - Endpoint: `/api/users/:userID`
-  - Metodo: `GET`
-  - Descrizione: Ottiene le informazioni di un utente tramite il suo ID.
-
-- **Aggiornare un utente per ID**
+- **Retrieve a user by ID**
 
   - Endpoint: `/api/users/:userID`
-  - Metodo: `PUT`
-  - Descrizione: Aggiorna le informazioni di un utente in base al suo ID.
-    - Body della richiesta:
-    - **name**: Nome
-    - **surname**: Cognome
-    - **email**: Email.
+  - Method: `GET`
+  - Description: Retrieves user information by their ID.
 
-- **Eliminare un utente per ID**
+- **Update a user by ID**
+
   - Endpoint: `/api/users/:userID`
-  - Metodo: `DELETE`
-  - Descrizione: Elimina un utente tramite il suo ID.
+  - Method: `PUT`
+  - Description: Updates user information by their ID.
+    - Request body:
+    - **name**: First name
+    - **surname**: Last name
+    - **email**: Email address
+
+- **Delete a user by ID**
+  - Endpoint: `/api/users/:userID`
+  - Method:: `DELETE`
+  - Description: Deletes a user by their ID.
 
 ### Products API
 
-- **Creare un nuovo prodotto**
+- **Create a new product**
 
   - Endpoint: `/api/products/`
-  - Metodo: `POST`
-  - Descrizione: Crea un nuovo prodotto.
-    - Body della richiesta:
-    - **name**: Nome del prodotto.
+  - Method: `POST`
+  - Description: Creates a new product.
+    - Request body:
+    - **name**: Product name
 
-- **Recuperare tutti i prodotti**
+- **Retrieve all products**
 
   - Endpoint: `/api/products/`
-  - Metodo: `GET`
-  - Descrizione: Recupera l’elenco di tutti i prodotti.
+  - Method: `GET`
+  - Description: Retrieves a list of all products.
 
-- **Recuperare un prodotto per ID**
-
-  - Endpoint: `/api/products/:productId`
-  - Metodo: `GET`
-  - Descrizione: Recupera le informazioni di un prodotto tramite il suo ID.
-
-- **Aggiornare un prodotto per ID**
+- **Retrieve a product by ID**
 
   - Endpoint: `/api/products/:productId`
-  - Metodo: `PUT`
-  - Descrizione: Aggiorna le informazioni di un prodotto tramite il suo ID.
-  - Body della richiesta:
-    - **name**:  Nome del prodotto
+  - Method: `GET`
+  - Description: Retrieves product information by its ID.
 
-- **Eliminare un prodotto per ID**
+- **Update a product by ID**
+
   - Endpoint: `/api/products/:productId`
-  - Metodo: `DELETE`
-  - Descrizione: Elimina un prodotto in base al suo ID.
+  - Method: `PUT`
+  - Description: Updates product information by its ID.
+  - Request body:
+    - **name**: Product name
+
+- **Delete a product by ID**
+  - Endpoint: `/api/products/:productId`
+  - Method: `DELETE`
+  - Description: Deletes a product by its ID.
 
 ### Orders API
 
-- **Creare un nuovo ordine**
+- **Create a new order**
 
   - Endpoint: `/api/orders/`
-  - Metodo: `POST`
-  - Descrizione: Crea un nuovo ordine.
-  - Body della richiesta:
-    - **userID**: ID dell’utente
-    - **productID**:  ID del prodotto
+  - Method: `POST`
+  - Description: Creates a new order.
+  - Request body:
+    - **userID**: User ID
+    - **productID**:  Product ID
 
 
-- **Recuperare tutti gli ordini**
+- **Retrieve all orders**
 
   - Endpoint: `/api/orders/`
-  - Metodo: `GET`
-  - Descrizione: Recupera l’elenco di tutti gli ordini.
+  - Method: `GET`
+  - Description: Retrieves a list of all orders.
 
-- **Recuperare tutti gli ordini per data**
+- **Retrieve all orders by date**
 
   - Endpoint: `/api/orders/all/:date`
-  - Metodo: `GET`
-  - Descrizione: Recupera gli ordini filtrati per una data specifica.
+  - Method: `GET`
+  - Description: Retrieves orders filtered by a specific date.
 
-- **Recuperare tutti gli ordini per prodotto**
+- **Retrieve all orders by product**
 
   - Endpoint: `/api/search/:productName`
-  - Metodo: `GET`
-  - Descrizione: Recupera gli ordini filtrati per un prodotto specifico.
+  - Method: `GET`
+  - Description: Retrieves orders filtered by a specific product.
 
-- **Recuperare un ordine per ID**
-
-  - Endpoint: `/api/orders/:orderId`
-  - Metodo: `GET`
-  - Descrizione: Recupera un ordine tramite il suo ID.
-
-- **Aggiornare un ordine per ID**
+- **Retrieve an order by ID**
 
   - Endpoint: `/api/orders/:orderId`
-  - Metodo: `PUT`
-  - Descrizione: Aggiorna un ordine in base al suo ID.
-  - Body della richiesta:
-    - **userID**:  ID dell’utente
-    - **productID**: ID del prodotto
+  - Method: `GET`
+  - Description: Retrieves an order by its ID.
 
-- **Eliminare un ordine per ID**
+- **Update an order by ID**
+
+  - Endpoint: `/api/orders/:orderId`
+  - Method: `PUT`
+  - Description: Updates an order by its ID.
+  - Request body:
+    - **userID**:  User ID
+    - **productID**: Product ID
+
+- **Delete an order by ID**
   - Endpoint: `/api/orders/:orderId`
   - Method: `DELETE`
-  - Descrizione: Elimina un ordine in base al suo ID.
+  - Description: Deletes an order by its ID.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CONTATTI-->
-
-## Contatti
+## Contact
 
 - LinkedIn: [Erjon Havolli](https://www.linkedin.com/in/erjon-havolli/)
 - GitHub: [Erjon Havolli](https://github.com/HavolliErjon)

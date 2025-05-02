@@ -1,6 +1,5 @@
 const User = require('../models/userModel');
 
-// Crea un nuovo utente
 exports.createUser = async (req, res) => {
   try {
     const newUser = new User(req.body);
@@ -11,12 +10,32 @@ exports.createUser = async (req, res) => {
   }
 };
 
-// Ottieni tutti gli utenti
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+};
+
+exports.updateUser = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { firstName, lastName, email } = req.body;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { firstName, lastName, email },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: 'Error updating user', error: error.message });
   }
 };

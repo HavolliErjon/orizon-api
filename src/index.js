@@ -1,31 +1,36 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const productRoutes = require('./routes/productRoutes'); 
-const userRoutes = require('./routes/userRoutes');  
-const orderRoutes = require('./routes/orderRoutes');  
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+require('dotenv').config(); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware per leggere i body JSON nelle richieste
 app.use(express.json());
 
-// Rotte
-app.use('/api', productRoutes);  
-app.use('/api/users', userRoutes);  
-app.use('/api/ordini', orderRoutes);  
 
-// Connessione al database MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/orizon', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => {
-  console.log('Connessione a MongoDB riuscita');
-  app.listen(PORT, () => {
-    console.log(`Server avviato su http://localhost:${PORT}`);
-  });
-})
-.catch((err) => {
-  console.error('Errore di connessione a MongoDB:', err);
+app.use((req, res, next) => {
+  console.log(`${req.method} request to ${req.url}`);
+  next();
 });
+
+app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Orizon API! Visit /api for available endpoints.');
+});
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('MongoDB connection error:', err);
+  });
