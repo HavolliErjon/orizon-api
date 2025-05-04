@@ -27,7 +27,7 @@ This project uses **Node.js** and **Express.js**. Make sure these tools are inst
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/tuo-utente/orizon-api.git
+   git clone https://github.com/HavolliErjon/orizon-api.git
 
    ```
 
@@ -46,7 +46,7 @@ This project uses **Node.js** and **Express.js**. Make sure these tools are inst
 
 4. Start the application:
    ```
-   node server.js
+   npm start
    ```
       <p align="right">(<a href="#readme-top">back to top</a>)</p>
    
